@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./CSS styling/test.css">
+    <style>
+      form{
+    
+      input{
+        height: 25px;
+        width: 200px;
+        text-align:
+        left;
+        padding-left: 5px;
+        border: 0.5px solid inherit;
+        border-radius: 25px;
+        background-color: bisque;
+
+        
+      }
+    label{
+        
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+      .con2{
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        border: inherit;
+        border-radius: 25px;
+      }
+      a{
+        transition: 0.2s ease;
+      }
+      a:hover{
+        color: aliceblue;
+        text-decoration:underline;
+        text-transform: capitalize;
+      }
+      @media (max-width: 768px) {
+        body{
+          display: flex;
+          flex-direction: column;
+        }
+        .contactcont {
+          flex-direction: column;
+          height: auto;
+        }
+        section{
+          display: flex;
+          flex-direction: column;
+        }
+        .contactbox1, .contactbox2 {
+          width: 100%;
+          height: 500px; 
+        }
+
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 5px 0;
+        }
+        footer{
+          z-index: 1;
+        }
+      }
+
+      @media (max-width: 480px) {
+        input, textarea {
+          width: 100%;
+          
+        }
+
+        .contactagentbox {
+          max-width: 100%;
+          
+        }
+        p{
+          font-size: 5px;
+        }
+
+        .dropdown-content {
+          width: 100%;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RealHome</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Properties</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="buy.html">buy</a>
+                          <a href="sell.html">sell</a>
+                          <a href="rent.html">rent</a>
+                        </div>
+                      </div>
+                      
+                      <script>
+                      /* When the user clicks on the button, 
+                      toggle between hiding and showing the dropdown content */
+                      function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                      }
+                      
+                      // Close the dropdown if the user clicks outside of it
+                      window.onclick = function(event) {
+                        if (!event.target.matches('.dropbtn')) {
+                          var dropdowns = document.getElementsByClassName("dropdown-content");
+                          var i;
+                          for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                            }
+                          }
+                        }
+                      }
+                      </script>
+                      
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="index.html">Sign In</a></li>
+                <li><a href="#"><img src="./images/user.png" style="height: 30px;width: 30px;border: 0.2px; border-radius: 30px; background-color: aqua; margin-top: 10px;"></a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="contactcont">
+      <div class="contactbox1">
+        <div class="con2"> 
+          <div id="contact-title">Contact Us</div>
+            <p>Please contact us if you have any questions.</p>
+            <h2>Our Number:</h2>
+            <p id="number">+27 66 070 5273</p>
+            <h2>Our Email:</h2>
+            <p id="ourEmail">swartjustin105@gmail.com</p>
+        </div>
+      </div>
+      <div class="contactbox2">
+          <section>
+              <h1>Want to contact us?</h1>
+              <form>
+                  <label for="name">User name:<br></label>
+                  <input type="text" id="name" required placeholder="Justin0818">
+                  <label for="email"><br>Email<br></label>
+                  <input type="email" id="email" required placeholder="@gmail.com">
+                  <label for="message"><br>Message<br></label>
+                  <textarea id="message" required placeholder="Your message here..." onclick=""></textarea>
+                  <button type="submit">Submit</button>
+              </form>
+          </section>
+      </div>
+  </div>
+  <section>
+    <hr style="height: 15px; background-color: black; margin-top: 25px;">
+    <h1 style="text-align: center;">Contact Agents</h1>
+    <div class="contactagentboxcontain">
+      <div class="contactagentbox">
+        <img src="./images/justinSwart.jpg" alt="Justin swart" style="height: 120px;width: 100px; border: 0.2; border-radius: 100px; float: left;">
+        <h3 style="margin-top: 0;">Justin Swart</h3>
+        <p style="margin-top: 0;">Justin Swart is a dedicated real estate agent, committed to helping clients to buy, sell, and rent properties with ease and expertise.</p>
+        <p><img src="./images/email.png" style="height: 20px; width: 20px; border:0.1; border-radius: 25px; margin-top: 10px; margin-right: 5px;"><a href=mailto:"swartjustin105@gmail.com" style="text-decoration: none; color: #000">swartjustin105@gmail.com</a></p>
+        <p><img src="./images/call.png" style="height: 20px; width: 20px; border:0.1; border-radius: 25px; margin-top: 10px; margin-right: 5px;"><a href=tel:"0660705273" style="text-decoration: none; color: #000">+27 066 070 5273</a></p>
+      </div>
+      <div class="contactagentbox">
+        <img src="./images/justinSwart.jpg" alt="Justin swart" style="height: 120px;width: 100px; border: 0.2; border-radius: 100px; float: left;">
+        <h3 style="margin-top: 0;">Justin Swart</h3>
+        <p style="margin-top: 0;">Justin Swart is a dedicated real estate agent, committed to helping clients to buy, sell, and rent properties with ease and expertise.</p>
+        <p><img src="./images/email.png" style="height: 20px; width: 20px; border:0.1; border-radius: 25px; margin-top: 10px; margin-right: 5px;"><a href=mailto:"swartjustin105@gmail.com" style="text-decoration: none; color: #000">swartjustin105@gmail.com</a></p>
+        <p><img src="./images/call.png" style="height: 20px; width: 20px; border:0.1; border-radius: 25px; margin-top: 10px; margin-right: 5px;"><a href=tel:"0660705273" style="text-decoration: none; color: #000">+27 066 070 5273</a></p>
+      </div>
+      <div class="contactagentbox">
+        <img src="./images/justinSwart.jpg" alt="Justin swart" style="height: 120px;width: 100px; border: 0.2; border-radius: 100px; float: left;">
+        <h3 style="margin-top: 0;">Justin Swart</h3>
+        <p style="margin-top: 0;">Justin Swart is a dedicated real estate agent, committed to helping clients to buy, sell, and rent properties with ease and expertise.</p>
+        <p><img src="./images/email.png" style="height: 20px; width: 20px; border:0.1; border-radius: 25px; margin-top: 10px; margin-right: 5px;"><a href=mailto:"swartjustin105@gmail.com" style="text-decoration: none; color: #000">swartjustin105@gmail.com</a></p>
+        <p><img src="./images/call.png" style="height: 20px; width: 20px; border:0.1; border-radius: 25px; margin-top: 10px; margin-right: 5px;"><a href=tel:"0660705273" style="text-decoration: none; color: #000">+27 066 070 5273</a></p>
+      </div>
+    </div>
+  </section>
+    <footer>
+        <p>&copy; 2024 RealHomes. All rights reserved.<br>
+        <a href="home.html" style="text-decoration: none; font-family: inherit; color: inherit;">home page</a></p>
+    </footer>
+</body>
+</html>

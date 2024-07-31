@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Property details</title>
+    <link rel="stylesheet" href="./CSS styling/test.css">
+    <script src="./JavaScript/propertyDetails.js" defer></script>
+    <style>
+    
+        
+        section{
+            margin-top: 100px;
+        }
+         #listing-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .listing {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            width: calc(33.333% - 40px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            justify-content: center;
+        }
+
+        .listing img {
+            max-width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .listing h3 {
+            margin-top: 0;
+        }
+
+        .listing p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .image-gallery {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .image-gallery img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .image-gallery img.active {
+            border: 2px solid #000;
+        }
+        #property-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .left-align{
+            text-align: left;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RealHome</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Properties</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="buy.html">buy</a>
+                          <a href="sell.html">sell</a>
+                          <a href="rent.html">rent</a>
+                        </div>
+                      </div>
+                      
+                      <script>
+                      /* When the user clicks on the button, 
+                      toggle between hiding and showing the dropdown content */
+                      function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                      }
+                      
+                      // Close the dropdown if the user clicks outside of it
+                      window.onclick = function(event) {
+                        if (!event.target.matches('.dropbtn')) {
+                          var dropdowns = document.getElementsByClassName("dropdown-content");
+                          var i;
+                          for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                            }
+                          }
+                        }
+                      }
+                      </script>
+                      
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="index.html">Sign In</a></li>
+                <li><a href="#"><img src="./images/user.png" style="height: 30px;width: 30px;border: 0.2px; border-radius: 30px; background-color: aqua; margin-top: 10px;"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="listing">
+        <div id="listing-box">
+            <main>
+                <h1 style="text-align: center;">Property Details</h1>
+                <hr style="height: 15px; background-color: #000;">
+                <div id="property-details"></div>
+            </main>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 RealHome. All rights reserved.</p>
+    </footer>
+</body>
+</html>

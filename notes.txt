@@ -1,0 +1,29 @@
+How to make a dropdown
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
+
+How to create an Icon bar
+    https://www.w3schools.com/howto/howto_css_icon_bar.asp
+
+How to create a menu Icon for mobile viewing
+    https://www.w3schools.com/howto/howto_css_menu_icon.asp
+
+How to implament side navigation
+    https://www.w3schools.com/howto/howto_js_sidenav.asp
+
+fix navigation bar
+    https://www.w3schools.com/howto/howto_css_fixed_menu.asp
+
+pagnation
+    https://www.w3schools.com/howto/howto_css_pagination.asp
+
+how to add email functionality
+    https://email.uplers.com/blog/best-practices-for-creating-html-email-links/
+
+Icons
+    https://www.flaticon.com/free-icons/email
+
+linking sql with php
+	https://www.raghwendra.com/blog/how-to-connect-html-to-database-with-mysql-using-php-example/
+
+sql
+https://www.geeksforgeeks.org/sql-cheat-sheet/#create-a-database-in-sql

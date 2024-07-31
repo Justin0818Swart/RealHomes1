@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./CSS styling/test.css">
+    <style>
+        section {
+            display: flex;
+            margin-top: 50px;
+        }
+        .sectionbox1, .sectionbox2 {
+            height: 100vh;
+            width: 50%;
+            margin-right: 20px;
+            padding-left: 20px;
+            border: 0.3px solid inherit;
+            border-radius: 25px;
+            text-align: center;
+        }
+        .sectionbox1{
+          margin-top: 250px;
+        }
+        .sectionbox2 {
+            margin-right: 0;
+            background-image: url(./images/real-estate-business-ideas.png);
+            background-size: 100% 100%;
+        }
+        .imgbox{
+            width: 250px;
+            display: flex;
+            border: 2.5px;
+            border-radius: 25px;
+            background-color: beige;
+        }
+        .imgboxc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+         /* Media Queries for Mobile Devices */
+         @media (max-width: 768px) {
+            section{
+                flex-direction: column;
+            }
+            header{
+                position: relative;
+            }
+            .sectionbox1, .sectionbox2 {
+                width: 100%;
+                padding: 10px;
+            }
+            .imgbox {
+                width: 100%;
+                max-width: 150px;
+                max-height: 200px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem; /* Smaller header text */
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .imgbox {
+                max-width: 100px;
+            }
+            .sectionbox1 h1, .sectionbox1 h2, .sectionbox1 p {
+                font-size: 1rem; /* Smaller text for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>We Buy Homes</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Properties</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="buy.html">Buy</a>
+                          <a href="sell.html">Sell</a>
+                          <a href="rent.html">Rent</a>
+                        </div>
+                      </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="index.html">Sign In</a></li>
+                <li><a href="#"><img src="./images/user.png" style="height: 30px;width: 30px;border: 0.2px; border-radius: 30px; background-color: aqua; margin-top: 10px;"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="sectionbox1">
+            <h1>Who are WE?</h1>
+            <p>We are a Realestate company that advertise new, old and renovated houses.<br>Get to know our team, vision and mission...</p>
+            <br style="gap: 25px;">
+            <h2>What is our Vision</h2>
+            <p>This project was started to help new users find properties to buy, rent, or sell, using a user-friendly interface. Our vision is to make a platform that will help you as a user find the perfect property for you.</p>
+            <br style="gap: 25px;">
+            <h2>What is our Mission</h2>
+            <p>As we all know, there are many property webpages out on the vast internet. So, our mission is to make this webpage your home for shopping for properties.</p>
+            <br style="gap: 25px;">
+            <h2>Our Team</h2>
+            <div class="imgboxc">
+                <div class="imgbox">
+                    <img src="./images/justinSwart.jpg" alt="Justin Swart" style="height: 50px; width: 50px; border: 0.2px; border-radius: 50px;">
+                    <p>Justin is the backend, frontend, and database developer. He is also the only developer on this project.</p>
+                </div>
+                <div class="imgbox">
+                    <img src="./images/justinSwart.jpg" alt="Justin Swart" style="height: 50px; width: 50px; border: 0.2px; border-radius: 50px;">
+                    <p>Mr. Swart is the founder of RealHomes and the current CEO.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sectionbox2" style="margin-top: 50px;">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 RealHomes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

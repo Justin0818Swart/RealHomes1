@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealHome</title>
+    <link rel="stylesheet" href="./CSS styling/test.css">
+    <style>
+        /* Additional styling for the layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            margin-top: -100px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        .dropbtn:hover .dropdown-content {
+            display: block;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #listing-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .listing {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            width: calc(33.333% - 40px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .listing img {
+            max-width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .listing h3 {
+            margin-top: 0;
+        }
+
+        .listing p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .image-gallery {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .image-gallery img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .image-gallery img.active {
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RealHome</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Properties</button>
+                        <div class="dropdown-content">
+                            <a href="buy.html">Buy</a>
+                            <a href="sell.html">Sell</a>
+                            <a href="rent.html">Rent</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="index.html">Sign In</a></li>
+                <li><a href="#"><img src="./images/user.png" style="height: 30px;width: 30px;border: 0.2px; border-radius: 30px; background-color: aqua; margin-top: 10px;"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="search" style="margin-top: 100px;">
+        <h2>Search Properties</h2>
+        <form id="search-form">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location">
+
+            <label for="price-range">Price Range per month:</label>
+            <select id="price-range" name="price-range">
+                <option value="">Any</option>
+                <option value="0-5000">R0 - 5000</option>
+                <option value="6000-10000">R6000 - 10000</option>
+                <option value="11000-20000">R11000 - 20000</option>
+                <option value="20000+">Over R20000</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section id="agent-profiles">
+        <h2>Our Agents</h2>
+        <div id="agent-list">
+            <!-- Agent profiles will be dynamically added here using JavaScript -->
+        </div>
+    </section>
+
+    <section id="listings">
+        <h2>Property Listings</h2>
+        <div id="listing-box">
+            <!-- Listings will be dynamically added here using JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 RealHome. All rights reserved.</p>
+    </footer>
+    <script src="./JavaScript/test2.js"></script>
+</body>
+</html>

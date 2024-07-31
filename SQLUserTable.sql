@@ -1,0 +1,8 @@
+USE RealHomesDB;
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(50) NOT NULL,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    Email NVARCHAR(100),
+    CreatedAt DATETIME DEFAULT GETDATE()
+);

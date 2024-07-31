@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Company</title>
+    <link rel="stylesheet" href="./CSS styling/test.css">
+</head>
+<body>
+    <header>
+        <h1>RealHome</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Properties</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="buy.html">buy</a>
+                          <a href="sell.html">sell</a>
+                          <a href="rent.html">rent</a>
+                        </div>
+                      </div>
+                      
+                      <script>
+                      /* When the user clicks on the button, 
+                      toggle between hiding and showing the dropdown content */
+                      function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                      }
+                      
+                      // Close the dropdown if the user clicks outside of it
+                      window.onclick = function(event) {
+                        if (!event.target.matches('.dropbtn')) {
+                          var dropdowns = document.getElementsByClassName("dropdown-content");
+                          var i;
+                          for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                            }
+                          }
+                        }
+                      }
+                      </script>
+                      
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="index.html">Sign In</a></li>
+                <li><a href="#"><img src="./images/user.png" style="height: 30px;width: 30px;border: 0.2px; border-radius: 30px; background-color: aqua; margin-top: 10px;"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section style="margin-top: 50px;">
+        <div class="homeboxcontain">
+            <div class="homebox">    
+            <h1 style="color: white; font-size: 50px; font-style: italic; font-weight: 900;">The beginning of your new Journey</h1>
+            </div>
+        </div>
+    </section>
+    <section style="margin-top: 50px;">
+                <h1 style="text-align: center;">Looking for your dream home?</h1>
+                <p style="text-align: center;">We offer a wide range of properties to choose from. From big to small, 1 to 9 bedrooms and many more.
+                <br>What ever you are looking for we garentee much better. At afordable prices.
+                </p>
+                <br>
+                <div class="boxservh2"><h1 style="text-align: center;"> What services do we offer?</h1></div>
+                
+                <div class="boxservcont">
+                  <div class="boxserv">
+                    <h2 style="text-align: center;">Listing homes<br></h2>
+                    <br>
+                    <p>We offer a great listing platform for Sellers that want a secure and easy to use platform.</p>
+                  </div>
+                  <div class="boxserv">
+                    <h2>Renting homes</h2><br>
+                    <p>For those that don't want to settle down right now we have a wide variety of rentable houses.</p>
+                  </div>
+                  <div class="boxserv">
+                    <h2>Buying homes</h2><br>
+                    <p>If you are ready to settle down and want the perfect house, there are many beautiful design homes to choose from.</p>
+                    
+                  </div>
+                </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 RealHomes. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

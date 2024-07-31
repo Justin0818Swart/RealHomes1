@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - We Buy Homes</title>
+    <link rel="stylesheet" href="./CSS styling/sign.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <form id="signin-form" method="post" action="http://localhost:5000/signin">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 RealHomes. All rights reserved.<br>
+        <a href="home.html" style="text-decoration: none; font-family: inherit; color: inherit; gap: 25px;">home page</a></p>
+    </footer>
+    <script src="./JavaScript/db.js" type="module"></script>
+    <script src="./JavaScript/signin.js" type="module"></script>
+</body>
+</html>
