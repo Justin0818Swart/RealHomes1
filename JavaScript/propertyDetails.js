@@ -9,7 +9,8 @@ const properties = [
         fullLocation:'Location : 5 Buttonwood st, Gonubie, Eastlondon',
         pricePerMonth: 'Price per month : R20 000',
         bathroom: 'Number of bathrooms : 3 ',
-        swimming: 'Swimming pools : 1 '
+        swimming: 'Swimming pools : 1 ',
+        locationMap: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.579495318344!2d27.928605315230114!3d-32.93832457972874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e665f72cf9ec3f1:0xc8c2efb5ed3946c5!2s5%20Buttonwood%20St,%20Gonubie,%20East%20London,%205250,%20South%20Africa!5e0!3m2!1sen!2sus!4v1659072041548!5m2!1sen!2sus'
 
     },
     {
@@ -22,7 +23,8 @@ const properties = [
         fullLocation:'Location : 5 Buttonwood st, Gonubie, Eastlondon',
         pricePerMonth: 'Price per month : R20 000',
         bathroom: 'Number of bathrooms : 3 ',
-        swimming: 'Swimming pools : 1 '
+        swimming: 'Swimming pools : 1 ',
+        locationMap: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.579495318344!2d27.928605315230114!3d-32.93832457972874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e665f72cf9ec3f1:0xc8c2efb5ed3946c5!2s5%20Buttonwood%20St,%20Gonubie,%20East%20London,%205250,%20South%20Africa!5e0!3m2!1sen!2sus!4v1659072041548!5m2!1sen!2sus'
     },
     {
         id: 6,
@@ -34,7 +36,8 @@ const properties = [
         fullLocation:'Location : 5 Buttonwood st, Gonubie, Eastlondon',
         pricePerMonth: 'Price per month : R20 000',
         bathroom: 'Number of bathrooms : 3 ',
-        swimming: 'Swimming pools : 1 '
+        swimming: 'Swimming pools : 1 ',
+        locationMap: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.579495318344!2d27.928605315230114!3d-32.93832457972874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e665f72cf9ec3f1:0xc8c2efb5ed3946c5!2s5%20Buttonwood%20St,%20Gonubie,%20East%20London,%205250,%20South%20Africa!5e0!3m2!1sen!2sus!4v1659072041548!5m2!1sen!2sus'
 
 
     }
@@ -119,6 +122,16 @@ function renderPropertyDetails(property) {
     swimming.textContent = property.swimming;
     swimming.classList.add('left-align');
     propertyDetails.appendChild(swimming);
+
+    const map = document.createElement('iframe');
+    map.src = property.locationMap;
+    map.style.width = '600px';
+    map.style.height = '450px';
+    map.style.border = '0';
+    map.allowFullscreen = '';
+    map.loading = 'lazy';
+    map.referrerPolicy = 'no-referrer-when-downgrade';
+    propertyDetails.appendChild(map);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
